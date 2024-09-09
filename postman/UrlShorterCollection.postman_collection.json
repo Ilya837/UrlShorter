@@ -1,0 +1,46 @@
+{
+	"info": {
+		"_postman_id": "0af494ee-05fa-4cac-8db5-53cf86fee8f8",
+		"name": "UrlShorterCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25030545"
+	},
+	"item": [
+		{
+			"name": "PostUrl",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"long_link\" : \"https://i06.fotocdn.net/s205/94a92d5ade84ce23/public_pin_l/2362727257.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUrl",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
