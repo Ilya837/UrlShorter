@@ -29,6 +29,10 @@ func (handler linkPairHandler) Get() gin.HandlerFunc {
 
 		linkPair, err := handler.linkPairService.Get(shortLink)
 		if err != nil {
+			if err.Error() == "short link not found" {
+				c.JSON(http.StatusNotFound, gin.H{"error": err.Error()})
+				return
+			}
 			c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 			return
 		}
